@@ -1,5 +1,10 @@
 .navbar {
 background-color: brown;
-text
 
+}
+
+.city {
+color: black;  
+font-weight: 900;
+font-size: larger;
 }

@@ -21,15 +21,15 @@
             <div class="col-4 bg-light">
                 <p class="search-header my-1">Search for a city</p>
                 <div class="input-group mb-3">
-                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name"
-                        aria-label="Enter city name">
+                    <input id="user-input" type="text" class="form-control" placeholder="City name"
+                        aria-label="City name">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="button" id="search-button">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
                 </div>
-                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+                <button class="btn btn-primary mb-3" type="button" id="clear-button">Clear</button>
                 <form id="history"></form>
             </div>
             <div class="col-8">
@@ -37,8 +37,12 @@
                     <div class="col-12 border border-dark m-3 rounded">
                         <div class="row">
                             <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <img id="current-pic" src="placeholder" alt="">
+                                <p id="city" class="city text-center"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="date" class="date text-center"></p>
                             </div>
                         </div>
                         <div class="row">
@@ -58,7 +62,7 @@
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex">
-                                <p id="UV-index"></p>
+                                <p id="UV"></p>
                             </div>
                         </div>
                     </div>
@@ -69,16 +73,52 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-                    <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+                    <div class="col bg-primary ">
+                        Hello
+                    </div>
+                    <div class="col bg-primary ">
+                        Hello
+                    </div>
+                    <div class="col bg-primary ">
+                        Hello
+                    </div>
+                    <div class="col bg-primary ">
+                        Hello
+                    </div>
+                    <div class="col bg-primary ">
+                        Hello
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+// const apiKey = "166a433c57516f51dfab1f7edaed8413";
+// const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + "Boulder" + "&appid=" + apiKey;
 
+
+// $.ajax({
+//     url: queryUrl,
+//     method: "GET"
+// })
+//     // We store all of the retrieved data inside of an object called "response"
+//     .then(function (response) {
+
+//         // Log the queryURL
+//         console.log(queryUrl);
+
+//         // Log the resulting object
+//         console.log(response);
+
+//     })
+
+
+
+
+
+    </script>
 </body>
 
 </html>
