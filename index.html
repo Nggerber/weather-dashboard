@@ -32,7 +32,7 @@
                 <button class="btn btn-primary mb-3" type="button" id="clear-button">Clear</button>
                 <form id="history"></form>
             </div>
-            <div class="col-8">
+            <div class="col-8" id="full-report">
                 <div class="row mr-0">
                     <div class="col-12 border border-dark m-3 rounded">
                         <div class="row">
@@ -44,6 +44,9 @@
                             <div class="col-12">
                                 <p id="date" class="date text-center"></p>
                             </div>
+                        </div>
+                        <div id="icon">
+                            <img id="weather-icon" src="" alt="Weather icon">
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -73,19 +76,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col bg-primary ">
+                    <div class="col bg-primary 5day " id="one">
                         Hello
                     </div>
-                    <div class="col bg-primary ">
+                    <div class="col bg-primary 5day " id="two">
                         Hello
                     </div>
-                    <div class="col bg-primary ">
+                    <div class="col bg-primary 5day ">
                         Hello
                     </div>
-                    <div class="col bg-primary ">
+                    <div class="col bg-primary 5day ">
                         Hello
                     </div>
-                    <div class="col bg-primary ">
+                    <div class="col bg-primary 5day ">
                         Hello
                     </div>
                 </div>
@@ -94,31 +97,7 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="./script.js"></script>
-    <script>
-// const apiKey = "166a433c57516f51dfab1f7edaed8413";
-// const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + "Boulder" + "&appid=" + apiKey;
-
-
-// $.ajax({
-//     url: queryUrl,
-//     method: "GET"
-// })
-//     // We store all of the retrieved data inside of an object called "response"
-//     .then(function (response) {
-
-//         // Log the queryURL
-//         console.log(queryUrl);
-
-//         // Log the resulting object
-//         console.log(response);
-
-//     })
-
-
-
-
-
-    </script>
+    
 </body>
 
 </html>

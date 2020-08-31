@@ -14,9 +14,6 @@ $(document).ready(function () {
 
 
 
-
-
-
     function weatherReport() {
         let userCity = userInput.val()
 
@@ -55,20 +52,37 @@ $(document).ready(function () {
                             uvIndex.addClass("bg-warning")
                         }
                     })
+
+                let iconCode = response.weather[0].icon
+                const queryIconUrl = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+                $("#weather-icon").attr("src", queryIconUrl)
+
             })
 
-        const queryUrl5day = "https://api.openweathermap.org/data/2.5/forecast?q=" + userCity + "&appid=" + apiKey;
-          console.log(queryUrl5day)  
 
-          $.ajax({
+        const queryUrl5day = "https://api.openweathermap.org/data/2.5/forecast?q=" + userCity + "&appid=" + apiKey;
+
+        $.ajax({
             url: queryUrl5day,
             method: "GET"
         })
-        .then(function (response) {
-          console.log(response)
+            .then(function (response) {
+                console.log(response)
+                var temp = response.list[0].main.temp
+                var humid = response.list[0].main.humidity
+                var date = new Date(response.list[0].dt_txt).toLocaleDateString()
+                var icon = response.list[0].weather[0].icon
+                asdf("#one", icon, date, temp, humid)
+                temp = response.list[8].main.temp
+                humid = response.list[8].main.humidity
+                date = new Date(response.list[8].dt_txt).toLocaleDateString()
+                icon = response.list[8].weather[0].icon
+                asdf("#two", icon, date, temp, humid)
+                
 
 
-        })  
+
+            })
 
 
 
@@ -78,6 +92,8 @@ $(document).ready(function () {
 
     $("#search-button").on("click", function (event) {
         weatherReport()
+        // asdf("#one", "https://cdn2.apstatic.com/photos/climb/109280084_sqsmall_1494345229_topo.jpg", "dhbdh", "100", "25")
+        // asdf("#two", "https://cdn2.apstatic.com/photos/climb/108294767_smallMed_1494274510.jpg", "ublivyvyv", "75", "15")
 
 
 
@@ -88,6 +104,26 @@ $(document).ready(function () {
     $("#clear-button").on("click", function (event) {
         console.log("click")
     })
+
+    function asdf(day, icon, theDate, temperature, humidity) {
+        $(day).text("")
+        var h1 = $("<h1>")
+        var img = $("<img>")
+        var p1 = $("<p>")
+        var p2 = $("<p>")
+        img.attr("src", "https://openweathermap.org/img/wn/" + icon + "@2x.png")
+        h1.text(theDate)
+        p1.text(temperature)
+        p2.text(humidity)
+
+
+
+
+
+        $(day).append(h1, p1, p2, img)
+        
+
+    }
 
 
 })
