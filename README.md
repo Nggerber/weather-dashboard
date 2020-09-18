@@ -1,0 +1,7 @@
+Project Overview 
+
+The goal of this project was to create a fully functional weather application that prompted the user with an Input field and allowed them to search for a city to get the weather information for that city. The application displays the current weather forecast which includes the temperature in degrees farenheit, the windspeed, the humidity level and the UV index. The application also displays the icon that is descriptive of the current weather as well as a styling that depicts when the UV index is favorable, moderate or hazardous. The Application also displays the 5 day forecast which includes the icon, temperature and humidity. The app also stores the search history of the user and saves the cities as buttons so the user can quickly access their past weather searches.
+
+This application uses the bootstrap framework for the input field and the search and clear buttons. I also used bootstrap colors for the UV Index and for some of the styling. To collect the weather data I used the Open Weather API which can search for forecasts by city name. I needed to set up ajax calls to get the weather data for the current forecast, 5 day forecast, UV index and for the weather icon. By using the ajax call we are able to access certain parts of the data to get the information we need to display on the page. 
+
+![weather-dashboard](https://user-images.githubusercontent.com/67764086/93645864-3f592580-f9c2-11ea-9838-875f80741142.PNG)

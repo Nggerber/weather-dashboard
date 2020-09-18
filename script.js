@@ -18,7 +18,7 @@ $(document).ready(function () {
     if (userCity) {
         weatherReport(userCity)
     }
-    
+
     searchHistory.forEach(city => {
         console.log(city)
 
@@ -26,44 +26,22 @@ $(document).ready(function () {
 
         var HistoryBtn = $("<button>")
         HistoryBtn.text(city)
-        
+
         console.log(HistoryBtn)
-        
+
         //button click run weather report function
 
         $(HistoryBtn).on("click", function (event) {
             weatherReport(city)
-    
-    
+
+
         })
-    
 
         //append button to history form
         searchHistoryDisplay.append(HistoryBtn)
     });
-    // temp.text(localStorage.getItem("Current Temperature"))
-    // todaysDate.text(localStorage.getItem("Today's Date"))
-    // cityName.text(localStorage.getItem("City"))
-    // humidity.text(localStorage.getItem("Humidity"))
-    // wind.text(localStorage.getItem("Wind Speed"))
-    // $("#weather-icon").attr("src", localStorage.getItem("Icon"))
-    // uvIndex.text(localStorage.getItem("UV Index"))
-
-    // if (uvIndex.text > 5) {
-    //     uvIndex.addClass("bg-danger")
-    // }
-    // else if (uvIndex.text < 3) {
-    //     uvIndex.addClass("bg-success")
-    // }
-    // else {
-    //     uvIndex.addClass("bg-warning")
-    // }
-
 
     function weatherReport(userCity) {
-        //variable to determine user input
-
-
 
         // add searched city to the search history variable and store it in local storage
 
@@ -71,7 +49,7 @@ $(document).ready(function () {
         localStorage.setItem("Searched Cities", JSON.stringify(searchHistory))
 
 
-        
+
         const apiKey = "a13b176036b4409af8289d9056930795";
         const queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + userCity + "&appid=" + apiKey;
 
@@ -204,7 +182,7 @@ $(document).ready(function () {
     })
 
 
-    
+
 
     // function to display 
     function asdf(day, icon, theDate, temperature, humidity) {
